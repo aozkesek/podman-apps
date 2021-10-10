@@ -6,7 +6,7 @@ import org.springframework.data.redis.core.RedisHash;
 @RedisHash("stock")
 public class Stock {
 	
-	@Id Long id;
+	@Id String id;
 	String name;
 	Double price;
 	Double quantity;
@@ -14,7 +14,7 @@ public class Stock {
 	Stock() {	
 	}
 	
-	public static Stock of(Long id, String name, Double price, Double quantity) {
+	public static Stock of(String id, String name, Double price, Double quantity) {
 		Stock stock = new Stock();
 		stock.id = id;
 		stock.name = name;
