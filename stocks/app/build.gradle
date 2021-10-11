@@ -11,6 +11,11 @@ plugins {
     id 'application'
 }
 
+compileJava {
+	sourceCompatibility=11
+	targetCompatibility=11
+}
+
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
